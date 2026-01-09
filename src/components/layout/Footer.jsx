@@ -24,38 +24,16 @@ const Footer = () => {
 
                 <div className="footer-divider-gold"></div>
 
-                <div className="footer-links-grid">
-                    <div className="footer-column">
-                        <h3>OUR BRANDS</h3>
+                <div className="footer-links-grid simplified-footer">
+                    <div className="footer-column nav-column">
+                        <h3>EXPLORE</h3>
                         <ul>
-                            <li><a href="#">Taj</a></li>
-                            <li><a href="#">SeleQtions</a></li>
-                            <li><a href="#">Vivanta</a></li>
-                            <li><a href="#">Ginger</a></li>
-                            <li><a href="#">Ama Stays & Trails</a></li>
-                            <li><a href="#">Qmin</a></li>
-                        </ul>
-                    </div>
-
-                    <div className="footer-column">
-                        <h3>CORPORATE</h3>
-                        <ul>
-                            <li><a href="#">Company Information</a></li>
-                            <li><a href="#">Corporate Governance</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Social Responsibility</a></li>
-                            <li><a href="#">Investor Relations</a></li>
-                        </ul>
-                    </div>
-
-                    <div className="footer-column">
-                        <h3>SUPPORT</h3>
-                        <ul>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Customer Care</a></li>
-                            <li><a href="#">Sitemap</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/rooms">Rooms & Suites</a></li>
+                            <li><a href="/gallery">Gallery</a></li>
+                            <li><a href="/amenities">Amenities</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                            <li><a href="/book">Book Now</a></li>
                         </ul>
                     </div>
 

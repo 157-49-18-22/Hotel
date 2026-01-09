@@ -180,6 +180,11 @@
         margin-bottom: 40px;
     }
 
+    /* Reset any column spans on mobile */
+    .form-group[style*="grid-column"] {
+        grid-column: span 1 !important;
+    }
+
     .check-availability-btn {
         width: 100%;
         padding: 20px;

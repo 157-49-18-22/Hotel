@@ -57,7 +57,7 @@ const Contact = () => {
 
                     <div className="info-item">
                         <h4>ADDRESS</h4>
-                        <p>Taj Palace, Apollo Bunder, Mumbai, Maharashtra 400001, India</p>
+                        <p>barsana,agra,400001, India</p>
                     </div>
 
                     <div className="info-item">
@@ -67,19 +67,13 @@ const Contact = () => {
 
                     <div className="info-item">
                         <h4>EMAIL</h4>
-                        <p>reservations@tajhotels.com</p>
+                        <p>reservations@Barsanahotels.com</p>
                     </div>
                 </div>
 
                 <div className="contact-form-wrapper">
                     <h3>SEND US A MESSAGE</h3>
-                    <form className="contact-form">
-                        <input type="text" placeholder="Your Name" />
-                        <input type="email" placeholder="Your Email" />
-                        <input type="tel" placeholder="Phone Number" />
-                        <textarea rows="5" placeholder="Your Message"></textarea>
-                        <button type="submit">SEND MESSAGE</button>
-                    </form>
+                    <ContactForm />
                 </div>
             </section>
 
@@ -109,6 +103,76 @@ const Contact = () => {
             </section>
             <Footer />
         </>
+    );
+};
+
+const ContactForm = () => {
+    const [status, setStatus] = React.useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+
+        setStatus("SENDING...");
+
+        try {
+            const response = await fetch("https://formspree.io/f/xwvvevbd", {
+                method: "POST",
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                setStatus("SUCCESS");
+                form.reset();
+                // Clear success message after 5 seconds to let user know it's ready again
+                setTimeout(() => setStatus(""), 5000);
+            } else {
+                setStatus("ERROR");
+            }
+        } catch (error) {
+            setStatus("ERROR");
+        }
+    };
+
+    if (status === "SUCCESS") {
+        return (
+            <div style={{ textAlign: 'center', padding: '40px 0', color: 'white' }}>
+                <h4 style={{ color: 'var(--primary-gold)', fontSize: '1.5rem', marginBottom: '10px' }}>Thank You!</h4>
+                <p>Your message has been sent successfully.</p>
+                <button
+                    onClick={() => setStatus("")}
+                    style={{
+                        marginTop: '20px',
+                        background: 'transparent',
+                        border: '1px solid var(--primary-gold)',
+                        color: 'var(--primary-gold)',
+                        padding: '10px 20px',
+                        fontSize: '0.9rem'
+                    }}
+                >
+                    SEND ANOTHER
+                </button>
+            </div>
+        );
+    }
+
+    return (
+        <form className="contact-form" onSubmit={handleSubmit}>
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="tel" name="phone" placeholder="Phone Number" required />
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+            {status === "ERROR" && <p style={{ color: 'red', marginBottom: '10px' }}>Ooops! There was an error.</p>}
+
+            <button type="submit" disabled={status === "SENDING..."}>
+                {status === "SENDING..." ? "SENDING..." : "SEND MESSAGE"}
+            </button>
+        </form>
     );
 };
 
