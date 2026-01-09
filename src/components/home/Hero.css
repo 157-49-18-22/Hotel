@@ -1,0 +1,131 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+}
+
+.hero-content {
+    margin-bottom: 80px;
+}
+
+.hero-content h2 {
+    font-family: var(--font-subheading);
+    font-style: italic;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--primary-gold);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Booking Widget */
+.booking-widget-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px 0;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.booking-widget {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    gap: 15px;
+}
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-right: 1px solid #ddd;
+    padding-right: 15px;
+}
+
+.search-field:last-of-type {
+    border-right: none;
+}
+
+.search-field label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.search-field input,
+.search-field select {
+    border: none;
+    background: transparent;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-dark);
+    width: 100%;
+    outline: none;
+}
+
+.search-btn {
+    background-color: var(--primary-gold);
+    color: var(--text-light);
+    /* Changed to white because background is gold */
+    color: #000;
+    /* Actually Taj is often black text on gold buttons for contrast */
+    font-weight: 700;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.search-btn:hover {
+    background-color: var(--primary-gold-hover);
+}
