@@ -48,7 +48,7 @@ const Navbar = () => {
                             <FaUser />
                             <span>Sign In</span>
                         </button>
-                        <Link to="/book" className="book-btn">BOOK A STAY</Link>
+                        <button className="book-btn">BOOK A STAY</button>
                     </div>
                 </div>
             </div>
