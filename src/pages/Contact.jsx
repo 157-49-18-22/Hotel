@@ -12,7 +12,7 @@ const Contact = () => {
     return (
         <>
             <Navbar />
-            <div className="page-header" style={{ height: '50vh' }}>
+            <div className="page-header" style={{ height: '72vh' }}>
                 <div className="page-header-bg">
                     <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Contact Header" />
                     <div className="overlay-dark"></div>

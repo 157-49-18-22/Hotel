@@ -2,7 +2,7 @@
 
 /* Header Styles */
 .gallery-header {
-    height: 50vh !important;
+    height: 70vh !important;
     /* Override inline style if any */
     position: relative;
     display: flex;
