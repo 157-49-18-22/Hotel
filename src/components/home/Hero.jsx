@@ -1,5 +1,6 @@
 import React from 'react';
 import './Hero.css';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
     return (
@@ -19,8 +20,35 @@ const Hero = () => {
             </div>
 
             <div className="hero-content container">
-                <h2>Experience the Unimagined</h2>
-                <h1>True Indian Hospitality</h1>
+                {/* Falling Italic Text */}
+                <motion.div
+                    initial={{ y: -200, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                    style={{ position: 'relative', zIndex: 2 }}
+                >
+                    <h2>Experience the Unimagined</h2>
+                </motion.div>
+
+                {/* Hanging Ribbon Sign */}
+                <motion.div
+                    className="hanging-sign"
+                    initial={{ y: -1000, rotateX: 45 }}
+                    animate={{ y: 0, rotateX: 0 }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 60,
+                        damping: 10,
+                        mass: 1.5,
+                        delay: 0.2
+                    }}
+                >
+                    <div className="ribbon-line left"></div>
+                    <div className="ribbon-line right"></div>
+                    <div className="sign-board">
+                        <h1>TRUE INDIAN<br />HOSPITALITY</h1>
+                    </div>
+                </motion.div>
             </div>
 
             <div className="booking-widget-container">

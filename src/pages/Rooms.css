@@ -1,0 +1,652 @@
+/* Rooms.css - Premium Redesign */
+
+/* Page Header - Grand Entrance */
+.page-header {
+    position: relative;
+    height: 70vh;
+    /* Taller for more impact */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+.page-header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.page-header-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    /* Slightly darker for text contrast */
+    animation: zoomSlow 20s infinite alternate;
+}
+
+@keyframes zoomSlow {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.overlay-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+}
+
+.page-title {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    position: relative;
+    padding-top: 60px;
+}
+
+.page-title h1 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    /* Larger title */
+    font-weight: 400;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid var(--primary-gold);
+    display: inline-block;
+    padding-bottom: 10px;
+    color: var(--primary-gold);
+}
+
+.page-title p {
+    font-family: var(--font-subheading);
+    font-size: 1.5rem;
+    font-style: italic;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Rooms Section */
+.rooms-section {
+    padding-bottom: 100px;
+}
+
+.room-card {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 120px;
+    /* Generous spacing */
+    align-items: center;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Review: Stagger animations based on child index would require nth-child delay, 
+   but for now a simple fade in is fine or we can add delays if needed in JSX. 
+   We keep it simple in CSS. */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.room-card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Room Image */
+.room-image {
+    flex: 1.1;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    /* softer, premium shadow */
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.room-card:hover .room-image img {
+    transform: scale(1.08);
+}
+
+.room-overlay-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    backdrop-filter: blur(2px);
+}
+
+.room-card:hover .room-overlay-hover {
+    opacity: 1;
+}
+
+.room-overlay-hover button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 18px 40px;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.room-overlay-hover button:hover {
+    background: white;
+    color: black;
+    transform: translateY(-2px);
+}
+
+/* Room Info */
+.room-info {
+    flex: 0.9;
+    padding: 20px;
+}
+
+.room-price {
+    display: block;
+    font-family: var(--font-subheading);
+    font-style: italic;
+    font-size: 1.8rem;
+    color: var(--primary-gold);
+    margin-bottom: 10px;
+}
+
+.room-info h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.gold-divider {
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-gold);
+    margin-bottom: 30px;
+}
+
+.room-info p {
+    font-family: var(--font-body);
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+/* Features */
+.room-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.feature-pill {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: 1px solid #e0e0e0;
+    color: #666;
+    background: transparent;
+    transition: all 0.3s ease;
+    /* Clean rectangular look - no border radius = premium */
+}
+
+.feature-pill:hover {
+    border-color: var(--primary-gold);
+    color: var(--primary-gold);
+}
+
+/* Actions */
+.room-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.book-room-btn,
+.book-now-small-btn {
+    padding: 18px 40px;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    min-width: 160px;
+    text-align: center;
+}
+
+.book-room-btn {
+    background-color: white;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+}
+
+.book-room-btn:hover {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.book-now-small-btn {
+    background-color: var(--primary-gold);
+    border: 1px solid var(--primary-gold);
+    color: white;
+}
+
+.book-now-small-btn:hover {
+    background-color: #9e8229;
+    /* Darker gold */
+    border-color: #9e8229;
+}
+
+/* 360 Modal */
+.modal-360-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.4s ease;
+}
+
+.modal-360-content {
+    width: 95%;
+    max-width: 1400px;
+    height: 85vh;
+    background: #000;
+    position: relative;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.8);
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-360-btn {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-gold);
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-360-btn:hover {
+    transform: rotate(90deg);
+    background: white;
+    color: black;
+}
+
+.modal-360-content h3 {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 1.5rem;
+    z-index: 10;
+    background: transparent;
+    padding: 0;
+    text-align: left;
+    margin: 0;
+}
+
+.panorama-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #111;
+    position: relative;
+}
+
+.panorama-image {
+    height: 100%;
+    width: auto;
+    max-width: none;
+    min-width: 120%;
+    /* wider than container */
+    object-fit: cover;
+    animation: slowPan 40s linear infinite alternate;
+}
+
+@keyframes slowPan {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-300px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .room-card {
+        flex-direction: column !important;
+        gap: 30px;
+        max-width: 700px;
+        margin: 0 auto 80px;
+    }
+
+    .room-image {
+        width: 100%;
+        height: 400px;
+    }
+
+    .room-info {
+        padding: 0;
+        text-align: center;
+    }
+
+    .gold-divider {
+        margin: 0 auto 30px;
+    }
+
+    .room-features {
+        justify-content: center;
+    }
+
+    .room-actions {
+        justify-content: center;
+    }
+
+}
+
+/* Details Modal - Global Styles */
+.details-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.4s ease;
+}
+
+.details-modal-content {
+    width: 90%;
+    max-width: 1000px;
+    background: white;
+    height: 80vh;
+    display: flex;
+    position: relative;
+    /* For close button positioning */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.details-modal-image {
+    flex: 1;
+    position: relative;
+}
+
+.details-modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-modal-info {
+    flex: 1;
+    padding: 60px 40px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.details-modal-info h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.details-modal-price {
+    font-family: var(--font-subheading);
+    font-size: 1.5rem;
+    color: var(--primary-gold);
+    margin-bottom: 30px;
+    display: block;
+    font-weight: 700;
+}
+
+.details-modal-desc {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.details-features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.details-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-body);
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.details-feature-item::before {
+    content: '✦';
+    color: var(--primary-gold);
+}
+
+.details-book-btn {
+    width: 100%;
+    padding: 20px;
+    background: var(--primary-gold);
+    color: white;
+    border: none;
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.details-book-btn:hover {
+    background: var(--primary-gold-hover);
+}
+
+.close-details-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 10;
+    color: black;
+}
+
+.close-details-btn:hover {
+    background: black;
+    color: white;
+    transform: rotate(90deg);
+}
+
+@media (max-width: 900px) {
+    .details-modal-content {
+        flex-direction: column;
+        height: 90vh;
+    }
+
+    .details-modal-image {
+        height: 300px;
+        flex: none;
+    }
+
+    .details-modal-info {
+        padding: 30px;
+    }
+}
+
+/* Hanging Sign System (Imported for Rooms Page) */
+.hanging-sign {
+    position: relative;
+    display: inline-block;
+}
+
+.ribbon-line {
+    position: absolute;
+    top: -100vh;
+    /* Go all the way up */
+    width: 4px;
+    height: 100vh;
+    /* Connect to sign */
+    background: linear-gradient(to bottom, #8a6e2f, var(--primary-gold), #8a6e2f);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.ribbon-line.left {
+    left: 20px;
+}
+
+.ribbon-line.right {
+    right: 20px;
+}
+
+/* The Sign Board Itself */
+.sign-board {
+    border: 3px solid var(--primary-gold);
+    padding: 30px 60px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+/* Decorative screws/nails for ribbons */
+.sign-board::before,
+.sign-board::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #fff, var(--primary-gold));
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    z-index: 5;
+}
+
+.sign-board::before {
+    left: 16px;
+}
+
+.sign-board::after {
+    right: 16px;
+}
+
+.page-title h1 {
+    /* Override default border-bottom since sign-board has a border */
+    border-bottom: none;
+    /* Ensure text styles match premium sign */
+    margin: 0;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .hanging-sign {
+        width: 100%;
+    }
+
+    .sign-board {
+        padding: 20px;
+    }
+
+    .ribbon-line {
+        display: none;
+    }
+}

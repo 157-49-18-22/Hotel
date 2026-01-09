@@ -1,0 +1,196 @@
+/* Amenities.css - Premium Services */
+
+/* Page Header - Taller & Cinematic */
+.amenities-header {
+    height: 60vh !important;
+}
+
+.amenities-header .page-header-bg img {
+    animation: zoomSlow 25s infinite alternate;
+}
+
+/* Introduction Text */
+.amenities-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 80px auto 40px;
+    padding: 0 20px;
+}
+
+.amenities-intro h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary-gold);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.amenities-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.amenities-section {
+    padding: 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    /* Remove gap as we handle spacing internally */
+}
+
+/* Zig-Zag Layout */
+.amenity-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    box-shadow: none;
+    margin-bottom: 0;
+    min-height: 500px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.amenity-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.amenity-card:nth-child(even) {
+    flex-direction: row-reverse;
+    background: #fdfdfd;
+}
+
+.amenity-img {
+    flex: 1;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+}
+
+.amenity-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s ease;
+}
+
+.amenity-card:hover .amenity-img img {
+    transform: scale(1.05);
+    /* Gentle zoom */
+}
+
+.amenity-info {
+    flex: 0.8;
+    padding: 60px 80px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.amenity-card:nth-child(even) .amenity-info {
+    text-align: right;
+    align-items: flex-end;
+    /* Align content specifically for flex column */
+}
+
+.amenity-info h3 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    /* Larger headings */
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.gold-divider-small {
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-gold);
+    margin: 0 0 30px;
+}
+
+.amenity-card:nth-child(even) .gold-divider-small {
+    margin: 0 0 30px 0;
+    /* Align right manually if needed, or rely on flex-end */
+}
+
+.amenity-info p {
+    color: #444;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    font-weight: 300;
+}
+
+/* Service Grid Section (New) */
+.service-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.service-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 30px 20px;
+    border: 1px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.service-icon-item:hover {
+    border-color: #eee;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--primary-gold);
+    /* If SVG, ideally styled via fill */
+    margin-bottom: 10px;
+}
+
+.service-label {
+    font-family: var(--font-subheading);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+
+    .amenity-card,
+    .amenity-card:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .amenity-img {
+        width: 100%;
+        height: 350px;
+        flex: none;
+    }
+
+    .amenity-info,
+    .amenity-card:nth-child(even) .amenity-info {
+        width: 100%;
+        padding: 40px 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .gold-divider-small {
+        margin: 0 auto 30px;
+    }
+}

@@ -1,0 +1,275 @@
+/* Gallery.css - Visual Journey */
+
+/* Header Styles */
+.gallery-header {
+    height: 50vh !important;
+    /* Override inline style if any */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.gallery-header .page-header-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: panZoom 20s infinite alternate;
+}
+
+@keyframes panZoom {
+    from {
+        transform: scale(1) translate(0, 0);
+    }
+
+    to {
+        transform: scale(1.1) translate(-20px, -10px);
+    }
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding-bottom: 100px;
+}
+
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: none;
+    font-family: var(--font-heading);
+    color: #888;
+    font-size: 0.9rem;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.filter-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--primary-gold);
+    transition: width 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    color: var(--primary-gold);
+}
+
+.filter-btn:hover::after,
+.filter-btn.active::after {
+    width: 100%;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    /* Center horizontally */
+    opacity: 0;
+    transition: all 0.5s ease;
+    padding: 40px;
+    text-align: center;
+    /* Ensure text rendering aligns center */
+}
+
+/* Specific fix based on user feedback to make text clearly interactive/visible */
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-category-tag {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--primary-gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease 0.1s;
+    display: inline-block;
+    border-bottom: 1px solid var(--primary-gold);
+    /* Add border to make it look like a label */
+    padding-bottom: 5px;
+}
+
+.gallery-image-title {
+    color: white;
+    font-family: var(--font-subheading);
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease 0.2s;
+}
+
+.gallery-item:hover .gallery-category-tag,
+.gallery-item:hover .gallery-image-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation */
+.animate-in {
+    animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Lightbox Modal */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 4000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    animation: fadeIn 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+}
+
+.lightbox-caption {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.lightbox-caption h3 {
+    color: var(--primary-gold);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.lightbox-caption p {
+    font-family: var(--font-subheading);
+    font-size: 1.1rem;
+    color: #ccc;
+    font-style: italic;
+}
+
+.close-lightbox-btn {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: transparent;
+    color: white;
+    font-size: 40px;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+    padding: 0 10px;
+}
+
+.close-lightbox-btn:hover {
+    color: var(--primary-gold);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 300px;
+    }
+
+    .gallery-overlay {
+        opacity: 1;
+        /* Always show overlay on mobile */
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        justify-content: flex-end;
+        padding: 20px;
+    }
+
+    .gallery-category-tag,
+    .gallery-image-title {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

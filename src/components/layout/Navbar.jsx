@@ -23,14 +23,7 @@ const Navbar = () => {
     return (
         <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container navbar-container">
-                <div className="navbar-left">
-                    <button className="menu-btn">
-                        <FaBars />
-                        <span>MENU</span>
-                    </button>
-                </div>
-
-                <div className="navbar-center logo">
+                <div className="navbar-left logo">
                     <Link to="/">
                         <h1>TAJ</h1>
                         <span>HOTELS</span>
@@ -39,16 +32,14 @@ const Navbar = () => {
 
                 <div className="navbar-right">
                     <div className="nav-links">
-                        <Link to="/destinations">Destinations</Link>
-                        <Link to="/hotels">Hotels</Link>
-                        <Link to="/dining">Dining</Link>
+
+                        <Link to="/rooms">ROOMS</Link>
+                        <Link to="/gallery">GALLERY</Link>
+                        <Link to="/amenities">AMENITIES</Link>
+                        <Link to="/contact">CONTACT</Link>
                     </div>
                     <div className="nav-actions">
-                        <button className="auth-btn">
-                            <FaUser />
-                            <span>Sign In</span>
-                        </button>
-                        <button className="book-btn">BOOK A STAY</button>
+                        <Link to="/book" className="book-btn">BOOK NOW</Link>
                     </div>
                 </div>
             </div>

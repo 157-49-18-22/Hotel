@@ -2,7 +2,8 @@
 
 :root {
   /* Taj-inspired Luxury Palette */
-  --primary-gold: #D4AF37; /* The classic luxury gold */
+  --primary-gold: #D4AF37;
+  /* The classic luxury gold */
   --primary-gold-hover: #B4942D;
   --text-dark: #121212;
   --text-light: #F5F5F5;
@@ -11,12 +12,13 @@
   --bg-off-white: #FAFAFA;
   --overlay-black: rgba(0, 0, 0, 0.6);
   --border-color: #E0E0E0;
-  
+
   /* Typography */
-  --font-heading: 'Cinzel', serif; /* Very royal/luxury feel */
+  --font-heading: 'Cinzel', serif;
+  /* Very royal/luxury feel */
   --font-subheading: 'Playfair Display', serif;
   --font-body: 'Lato', sans-serif;
-  
+
   /* Spacing */
   --container-width: 1280px;
   --header-height: 90px;
@@ -36,7 +38,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -66,13 +73,16 @@ button {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--primary-gold);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-gold-hover);
 }

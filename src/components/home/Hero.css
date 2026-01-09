@@ -45,20 +45,111 @@
     margin-bottom: 80px;
 }
 
+/* Hero Content Styles */
+.hero-content {
+    margin-bottom: 80px;
+    perspective: 1000px;
+    /* For 3D swing effect */
+}
+
 .hero-content h2 {
     font-family: var(--font-subheading);
     font-style: italic;
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: var(--primary-gold);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    /* White for better visibility on fall */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Hanging Sign System */
+.hanging-sign {
+    position: relative;
+    display: inline-block;
+}
+
+.ribbon-line {
+    position: absolute;
+    top: -100vh;
+    /* Go all the way up */
+    width: 4px;
+    height: 100vh;
+    /* Connect to sign */
+    background: linear-gradient(to bottom, #8a6e2f, var(--primary-gold), #8a6e2f);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.ribbon-line.left {
+    left: 20px;
+}
+
+.ribbon-line.right {
+    right: 20px;
+}
+
+/* The Sign Board Itself */
+.sign-board {
+    border: 3px solid var(--primary-gold);
+    padding: 30px 60px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+/* Decorative screws/nails for ribbons */
+.sign-board::before,
+.sign-board::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #fff, var(--primary-gold));
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    z-index: 5;
+}
+
+.sign-board::before {
+    left: 16px;
+}
+
+.sign-board::after {
+    right: 16px;
 }
 
 .hero-content h1 {
     font-size: 4rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    max-width: 800px;
-    margin: 0 auto;
+    letter-spacing: 4px;
+    line-height: 1.2;
+    margin: 0;
+    color: var(--primary-gold);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-family: var(--font-heading);
+}
+
+@media (max-width: 768px) {
+    .hanging-sign {
+        width: 100%;
+    }
+
+    .sign-board {
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+
+    .ribbon-line {
+        display: none;
+        /* Hide complex ribbons on mobile if layout breaks, or keep them */
+    }
 }
 
 /* Booking Widget */
