@@ -16,20 +16,11 @@
     text-align: center;
 }
 
-.footer-logo {
-    font-family: var(--font-heading);
-    color: var(--primary-gold);
-    font-size: 3rem;
-    letter-spacing: 2px;
-    line-height: 1;
-}
-
-.footer-tagline {
-    display: block;
-    font-size: 0.8rem;
-    letter-spacing: 4px;
-    color: #fff;
-    margin-top: 5px;
+.footer-logo-image {
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
 .footer-socials {
@@ -162,5 +153,9 @@
 
     .footer-socials {
         align-items: center;
+    }
+
+    .footer-logo-image {
+        height: 100px;
     }
 }

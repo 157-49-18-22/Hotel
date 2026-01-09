@@ -46,7 +46,7 @@ const Hero = () => {
                     <div className="ribbon-line left"></div>
                     <div className="ribbon-line right"></div>
                     <div className="sign-board">
-                        <h1>TRUE INDIAN<br />HOSPITALITY</h1>
+                        <h1>ROYAL GRAND<br />BARSANA</h1>
                     </div>
                 </motion.div>
             </div>

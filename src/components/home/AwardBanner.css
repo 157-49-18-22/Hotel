@@ -95,3 +95,56 @@
     background-color: var(--primary-gold);
     margin: 0 40px;
 }
+
+/* Response Styles */
+@media (max-width: 768px) {
+    .award-section {
+        padding: 50px 20px;
+    }
+
+    .award-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .award-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .award-banner-image {
+        height: 400px;
+    }
+
+    .award-overlay {
+        padding: 30px;
+        align-items: flex-end;
+        /* Move content to bottom on mobile usually easier to read */
+    }
+
+    .award-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .vertical-divider {
+        width: 100%;
+        height: 1px;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .award-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .separator-line {
+        width: 40px;
+    }
+
+    .award-banner-image {
+        height: 350px;
+    }
+}

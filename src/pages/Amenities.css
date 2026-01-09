@@ -194,3 +194,209 @@
         margin: 0 auto 30px;
     }
 }
+
+/* Mobile View */
+@media (max-width: 768px) {
+
+    /* Header Mobile */
+    .amenities-header {
+        height: 60vh !important;
+        margin-bottom: 50px;
+    }
+
+    .amenities-header .page-title p {
+        font-size: 1.2rem !important;
+        padding: 0 20px;
+    }
+
+    .amenities-header .sign-board h1 {
+        font-size: 2rem !important;
+    }
+
+    /* Intro Mobile */
+    .amenities-intro {
+        margin: 50px auto 30px;
+        padding: 0 20px;
+    }
+
+    .amenities-intro h2 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .amenities-intro p {
+        font-size: 1rem;
+    }
+
+    /* Amenities Section Mobile */
+    .amenities-section {
+        padding: 0 0 60px;
+    }
+
+    .amenity-card {
+        min-height: auto;
+    }
+
+    .amenity-img {
+        height: 300px;
+    }
+
+    .amenity-info h3 {
+        font-size: 2rem;
+    }
+
+    .amenity-info p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* Services Section Mobile */
+    .service-icons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding-top: 30px;
+    }
+
+    .service-icon {
+        font-size: 2.5rem;
+    }
+
+    .service-label {
+        font-size: 0.95rem;
+    }
+
+    .service-icon-item {
+        padding: 25px 15px;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+
+    /* Header Extra Small */
+    .amenities-header {
+        height: 50vh !important;
+        margin-bottom: 40px;
+    }
+
+    .amenities-header .page-title {
+        padding-top: 40px;
+    }
+
+    .amenities-header .page-title p {
+        font-size: 1rem !important;
+        padding: 0 15px;
+    }
+
+    .amenities-header .sign-board {
+        padding: 15px 20px;
+        border-width: 2px;
+    }
+
+    .amenities-header .sign-board h1 {
+        font-size: 1.5rem !important;
+        letter-spacing: 2px;
+    }
+
+    .amenities-header .ribbon-line {
+        display: none;
+    }
+
+    /* Intro Extra Small */
+    .amenities-intro {
+        margin: 40px auto 25px;
+        padding: 0 15px;
+    }
+
+    .amenities-intro h2 {
+        font-size: 1.6rem;
+    }
+
+    .amenities-intro p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Amenities Section Extra Small */
+    .amenities-section {
+        padding: 0 0 50px;
+    }
+
+    .amenity-img {
+        height: 250px;
+    }
+
+    .amenity-info {
+        padding: 30px 15px;
+    }
+
+    .amenity-info h3 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .gold-divider-small {
+        width: 50px;
+        height: 2px;
+        margin: 0 auto 20px;
+    }
+
+    .amenity-info p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Services Section Extra Small */
+    .service-icons-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .service-icon {
+        font-size: 2rem;
+    }
+
+    .service-label {
+        font-size: 0.9rem;
+    }
+
+    .service-icon-item {
+        padding: 20px 15px;
+    }
+
+    /* At Your Service Section */
+    section[style*="padding: '0 20px 80px'"] {
+        padding: 0 15px 50px !important;
+    }
+
+    section div[style*="padding: '80px 40px'"] {
+        padding: 50px 20px !important;
+    }
+
+    section h2[style*="fontSize: '2.2rem'"] {
+        font-size: 1.6rem !important;
+    }
+}
+
+/* Hanging Sign Responsive */
+@media (max-width: 768px) {
+    .hanging-sign {
+        width: 100%;
+    }
+
+    .sign-board {
+        padding: 20px;
+    }
+
+    .ribbon-line {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .sign-board {
+        padding: 15px 20px;
+        border-width: 2px;
+    }
+}

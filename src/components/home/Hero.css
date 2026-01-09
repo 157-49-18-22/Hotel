@@ -50,6 +50,9 @@
     margin-bottom: 80px;
     perspective: 1000px;
     /* For 3D swing effect */
+    width: 90%;
+    /* Ensure it doesn't touch edges on mobile */
+    max-width: var(--container-width);
 }
 
 .hero-content h2 {
@@ -66,6 +69,7 @@
 .hanging-sign {
     position: relative;
     display: inline-block;
+    max-width: 100%;
 }
 
 .ribbon-line {
@@ -130,26 +134,6 @@
     color: var(--primary-gold);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     font-family: var(--font-heading);
-}
-
-@media (max-width: 768px) {
-    .hanging-sign {
-        width: 100%;
-    }
-
-    .sign-board {
-        padding: 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.2rem;
-        letter-spacing: 1px;
-    }
-
-    .ribbon-line {
-        display: none;
-        /* Hide complex ribbons on mobile if layout breaks, or keep them */
-    }
 }
 
 /* Booking Widget */
@@ -219,4 +203,90 @@
 
 .search-btn:hover {
     background-color: var(--primary-gold-hover);
+}
+
+/* Tablet & Mobile Styles */
+@media (max-width: 1024px) {
+    .booking-widget {
+        flex-wrap: wrap;
+        /* Allow wrapping on smaller tablets */
+    }
+
+    .booking-widget .search-field {
+        flex: 1 1 40%;
+        /* Take up half width usually */
+    }
+}
+
+@media (max-width: 768px) {
+    .hanging-sign {
+        width: 100%;
+    }
+
+    .sign-board {
+        padding: 20px 10px;
+        /* Reduces padding */
+        border-width: 2px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .ribbon-line {
+        display: block;
+        /* Restored visibility */
+    }
+
+    .booking-widget-container {
+        position: relative;
+        /* Unlock from bottom so it flows */
+        background-color: white;
+    }
+
+    .booking-widget {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .search-field {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding-right: 0;
+        padding-bottom: 15px;
+    }
+
+    .search-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .hero {
+        height: auto;
+        /* Allow auto height on mobile if content overflows */
+        min-height: 100vh;
+        padding-top: 100px;
+        /* Space for navbar */
+        padding-bottom: 50px;
+    }
+
+    .hero-content {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
 }

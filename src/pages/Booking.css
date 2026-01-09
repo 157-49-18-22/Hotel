@@ -125,13 +125,144 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
+/* Responsive adjustments */
+/* Tablet View */
+@media (max-width: 1024px) {
+    .booking-page-section {
+        padding: 80px 40px;
+    }
+
     .booking-card-large {
-        padding: 40px 20px;
+        padding: 60px 40px;
     }
 
     .booking-form-grid {
+        gap: 40px 30px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+
+    /* Header Mobile */
+    .booking-header {
+        height: 50vh !important;
+        margin-bottom: 50px;
+    }
+
+    .page-title p {
+        font-size: 1.2rem !important;
+        padding: 0 20px;
+    }
+
+    .sign-board h1 {
+        font-size: 2rem !important;
+    }
+
+    /* Booking Card Mobile */
+    .booking-page-section {
+        padding: 60px 20px;
+    }
+
+    .booking-card-large {
+        padding: 40px 25px;
+    }
+
+    .booking-card-large h2 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    /* Form Mobile */
+    .booking-form-grid {
         grid-template-columns: 1fr;
         gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .check-availability-btn {
+        width: 100%;
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+
+    /* Header Extra Small */
+    .booking-header {
+        height: 45vh !important;
+    }
+
+    .page-title {
+        padding-top: 40px;
+    }
+
+    .page-title p {
+        font-size: 1rem !important;
+        padding: 0 15px;
+    }
+
+    .sign-board {
+        padding: 15px 20px;
+        border-width: 2px;
+    }
+
+    .sign-board h1 {
+        font-size: 1.5rem !important;
+        letter-spacing: 2px;
+    }
+
+    .ribbon-line {
+        display: block;
+    }
+
+    /* Booking Card Extra Small */
+    .booking-page-section {
+        padding: 40px 15px;
+    }
+
+    .booking-card-large {
+        padding: 30px 15px;
+    }
+
+    .booking-card-large h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    /* Form Extra Small */
+    .booking-form-grid {
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+
+    .form-group label {
+        font-size: 0.75rem;
+        margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 10px 0;
+        font-size: 1rem;
+    }
+
+    .check-availability-btn {
+        padding: 18px;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+    }
+}
+
+/* Hanging Sign Responsive */
+@media (max-width: 768px) {
+    .hanging-sign {
+        width: 100%;
+    }
+
+    .sign-board {
+        padding: 20px;
     }
 }

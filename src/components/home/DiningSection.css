@@ -82,3 +82,52 @@
     color: #888;
     font-size: 0.9rem;
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .dining-grid {
+        flex-wrap: wrap;
+    }
+
+    .dining-card {
+        flex: 1 1 45%;
+        /* Two cards per row on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .dining-section {
+        padding: 60px 20px;
+    }
+
+    .dining-header h2 {
+        font-size: 2rem;
+    }
+
+    .dining-grid {
+        flex-direction: column;
+    }
+
+    .dining-card {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .dining-section {
+        padding: 40px 15px;
+    }
+
+    .dining-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .dining-img-container {
+        height: 250px;
+    }
+
+    .dining-info {
+        padding: 20px;
+    }
+}

@@ -8,8 +8,7 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-top">
                     <div className="footer-brand">
-                        <h2 className="footer-logo">TAJ</h2>
-                        <span className="footer-tagline">HOTELS</span>
+                        <img src="/logo.png" alt="Hotel Royal Grand Barsana" className="footer-logo-image" />
                     </div>
                     <div className="footer-socials">
                         <span className="social-label">CONNECT WITH US</span>
@@ -71,7 +70,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} The Indian Hotels Company Limited. All Rights Reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Hotel Royal Grand Barsana. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>

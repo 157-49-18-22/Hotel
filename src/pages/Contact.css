@@ -233,21 +233,212 @@
     font-weight: 300;
 }
 
-@media (max-width: 900px) {
+/* Responsive adjustments */
+/* Tablet View */
+@media (max-width: 1024px) {
     .contact-section {
         flex-direction: column;
         gap: 60px;
+        padding: 80px 40px;
+    }
+
+    .contact-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-item {
+        border-left: none;
+        border-bottom: 2px solid var(--primary-gold);
+        padding-left: 0;
+        padding-bottom: 20px;
+        display: inline-block;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .contact-form-wrapper {
+        width: 100%;
     }
 
     .directions-grid {
-        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+
+    /* Header Mobile */
+    .contact-header {
+        height: 60vh !important;
+        margin-bottom: 50px;
     }
 
+    .page-title p {
+        font-size: 1.2rem !important;
+        padding: 0 20px;
+    }
+
+    .sign-board h1 {
+        font-size: 2rem !important;
+    }
+
+    /* Contact Section Mobile */
+    .contact-section {
+        padding: 60px 20px;
+        gap: 40px;
+    }
+
+    .contact-info h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact-info .contact-intro {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+
+    /* Form Mobile */
     .contact-form-wrapper {
         padding: 40px 20px;
     }
 
+    .contact-form-wrapper h3 {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    .contact-form button {
+        width: 100%;
+        padding: 18px;
+    }
+
+    /* Map Section Mobile */
     .map-section {
-        padding: 0 20px 80px;
+        padding: 0 20px 60px;
+    }
+
+    .map-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .map-container {
+        height: 300px;
+        margin-bottom: 40px;
+    }
+
+    .map-container iframe {
+        height: 100%;
+    }
+
+    .directions-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+
+    /* Header Extra Small */
+    .page-header {
+        height: 50vh !important;
+    }
+
+    .page-title {
+        padding-top: 40px;
+    }
+
+    .page-title p {
+        font-size: 1rem !important;
+        padding: 0 15px;
+    }
+
+    .sign-board {
+        padding: 15px 20px;
+        border-width: 2px;
+    }
+
+    .sign-board h1 {
+        font-size: 1.5rem !important;
+        letter-spacing: 2px;
+    }
+
+    .ribbon-line {
+        display: block;
+    }
+
+    /* Contact Info Extra Small */
+    .contact-section {
+        padding: 40px 15px;
+    }
+
+    .contact-info h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .info-item {
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+    }
+
+    .info-item h4 {
+        font-size: 0.9rem;
+    }
+
+    /* Form Extra Small */
+    .contact-form-wrapper {
+        padding: 30px 15px;
+    }
+
+    .contact-form-wrapper h3 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.95rem;
+        padding: 12px 0;
+    }
+
+    .contact-form button {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Map & Directions Extra Small */
+    .map-section {
+        padding: 0 15px 50px;
+    }
+
+    .map-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .direction-card {
+        padding: 25px;
+    }
+
+    .direction-card h3 {
+        font-size: 1rem;
+    }
+
+    .direction-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Hanging Sign Responsive */
+@media (max-width: 768px) {
+    .hanging-sign {
+        width: 100%;
+    }
+
+    .sign-board {
+        padding: 20px;
     }
 }

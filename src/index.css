@@ -69,6 +69,13 @@ button {
   padding: 0 20px;
 }
 
+/* Responsive container padding */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
 /* Scrollbar styling for premium feel */
 ::-webkit-scrollbar {
   width: 8px;

@@ -8,6 +8,8 @@ import EventsSection from '../components/home/EventsSection';
 import Footer from '../components/layout/Footer';
 import { AnimatedSection, AnimatedDiv, AnimatedTitle, fadeInUp, staggerContainer, scaleIn } from '../components/Animations';
 
+import './Home.css';
+
 const Home = () => {
     return (
         <>
@@ -20,10 +22,10 @@ const Home = () => {
                 </AnimatedSection>
 
                 {/* Animated Offers Grid */}
-                <AnimatedSection className="container" style={{ padding: '80px 20px' }}>
-                    <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-                        <div style={{ width: '60px', height: '1px', background: '#999', margin: '0 auto 20px' }}></div>
-                        <AnimatedTitle style={{ fontFamily: 'var(--font-heading)', fontSize: '2.5rem', color: '#333' }}>
+                <AnimatedSection className="container home-offers-section">
+                    <div className="offers-header">
+                        <div className="header-line"></div>
+                        <AnimatedTitle className="section-title">
                             EXPLORE MORE
                         </AnimatedTitle>
                     </div>
@@ -32,7 +34,7 @@ const Home = () => {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }}
+                        className="offers-grid"
                     >
                         {[
                             { title: "Romantic Getaways", img: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=600&q=80", subtitle: "Cherish moments together" },
@@ -42,21 +44,19 @@ const Home = () => {
                             <AnimatedDiv
                                 key={index}
                                 variant={scaleIn}
-                                style={{ boxShadow: '0 5px 15px rgba(0,0,0,0.08)', background: 'white' }}
+                                className="offer-card"
                                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
                             >
-                                <div style={{ height: '300px', overflow: 'hidden' }}>
+                                <div className="offer-card-image-wrapper">
                                     <img
                                         src={item.img}
                                         alt={item.title}
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }}
-                                        onMouseOver={(e) => e.target.style.transform = 'scale(1.1)'}
-                                        onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
+                                        className="offer-card-image"
                                     />
                                 </div>
-                                <div style={{ padding: '25px', textAlign: 'center' }}>
-                                    <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', marginBottom: '10px' }}>{item.title}</h3>
-                                    <p style={{ color: '#666', fontSize: '0.9rem' }}>{item.subtitle}</p>
+                                <div className="offer-card-content">
+                                    <h3 className="offer-card-title">{item.title}</h3>
+                                    <p className="offer-card-subtitle">{item.subtitle}</p>
                                 </div>
                             </AnimatedDiv>
                         ))}
