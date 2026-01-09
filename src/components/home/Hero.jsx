@@ -51,35 +51,7 @@ const Hero = () => {
                 </motion.div>
             </div>
 
-            <div className="booking-widget-container">
-                <div className="booking-widget">
-                    <div className="search-field">
-                        <label>WHERE TO?</label>
-                        <input type="text" placeholder="Search your destination..." />
-                    </div>
-                    <div className="search-field">
-                        <label>CHECK-IN</label>
-                        <input type="date" />
-                    </div>
-                    <div className="search-field">
-                        <label>CHECK-OUT</label>
-                        <input type="date" />
-                    </div>
-                    <div className="search-field">
-                        <label>GUESTS</label>
-                        <select>
-                            <option>1 Room, 1 Guest</option>
-                            <option>1 Room, 2 Guests</option>
-                            <option>2 Rooms, 4 Guests</option>
-                        </select>
-                    </div>
-                    <div className="search-field">
-                        <label>PROMO CODE</label>
-                        <input type="text" placeholder="Optional" />
-                    </div>
-                    <button className="search-btn">CHECK AVAILABILITY</button>
-                </div>
-            </div>
+
         </section>
     );
 };

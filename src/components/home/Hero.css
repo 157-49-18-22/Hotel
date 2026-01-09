@@ -136,87 +136,10 @@
     font-family: var(--font-heading);
 }
 
-/* Booking Widget */
-.booking-widget-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 20px 0;
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-}
 
-.booking-widget {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    gap: 15px;
-}
-
-.search-field {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    border-right: 1px solid #ddd;
-    padding-right: 15px;
-}
-
-.search-field:last-of-type {
-    border-right: none;
-}
-
-.search-field label {
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: #666;
-    margin-bottom: 5px;
-    letter-spacing: 1px;
-}
-
-.search-field input,
-.search-field select {
-    border: none;
-    background: transparent;
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--text-dark);
-    width: 100%;
-    outline: none;
-}
-
-.search-btn {
-    background-color: var(--primary-gold);
-    color: var(--text-light);
-    /* Changed to white because background is gold */
-    color: #000;
-    /* Actually Taj is often black text on gold buttons for contrast */
-    font-weight: 700;
-    padding: 15px 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    white-space: nowrap;
-}
-
-.search-btn:hover {
-    background-color: var(--primary-gold-hover);
-}
 
 /* Tablet & Mobile Styles */
-@media (max-width: 1024px) {
-    .booking-widget {
-        flex-wrap: wrap;
-        /* Allow wrapping on smaller tablets */
-    }
 
-    .booking-widget .search-field {
-        flex: 1 1 40%;
-        /* Take up half width usually */
-    }
-}
 
 @media (max-width: 768px) {
     .hanging-sign {
@@ -243,34 +166,12 @@
         /* Restored visibility */
     }
 
-    .booking-widget-container {
-        position: relative;
-        /* Unlock from bottom so it flows */
-        background-color: white;
-    }
 
-    .booking-widget {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 20px;
-    }
-
-    .search-field {
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-        padding-right: 0;
-        padding-bottom: 15px;
-    }
-
-    .search-btn {
-        width: 100%;
-        margin-top: 10px;
-    }
 
     .hero {
         height: auto;
         /* Allow auto height on mobile if content overflows */
-        min-height: 100vh;
+        min-height: 60vh;
         padding-top: 100px;
         /* Space for navbar */
         padding-bottom: 50px;
