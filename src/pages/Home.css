@@ -1,5 +1,5 @@
 .home-offers-section {
-    padding: 80px 20px;
+    padding: 40px 10px;
 }
 
 .offers-header {
@@ -75,7 +75,7 @@
 /* Mobile View */
 @media screen and (max-width: 480px) {
     .home-offers-section {
-        padding: 40px 15px;
+        padding: 20px 8px;
     }
 
     .section-title {

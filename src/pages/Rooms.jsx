@@ -34,11 +34,11 @@ const Rooms = () => {
         },
         {
             id: 3,
-            name: "Taj Club Room",
+            name: "royal grand Club Room",
             image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=2070&auto=format&fit=crop",
             price: "₹ 35,000 / Night",
-            desc: "Exclusive access to the Taj Club Lounge, complimentary high tea, and usage of the boardroom. Designed for the discerning traveler.",
-            longDesc: "The Taj Club Room is designed for the business traveler who appreciates exclusivity. Located on the higher floors, these rooms offer breathtaking views and access to the Taj Club Lounge, where you can enjoy complimentary breakfast, afternoon high tea, and evening cocktails. The room includes a large work desk, ergonomic chair, and premium stationery.",
+            desc: "Exclusive access to the royal grand Club Lounge, complimentary high tea, and usage of the boardroom. Designed for the discerning traveler.",
+            longDesc: "The royal grand Club Room is designed for the business traveler who appreciates exclusivity. Located on the higher floors, these rooms offer breathtaking views and access to the royal grand Club Lounge, where you can enjoy complimentary breakfast, afternoon high tea, and evening cocktails. The room includes a large work desk, ergonomic chair, and premium stationery.",
             amenities: ["600 Sq Ft", "Club Access", "High Tea", "Work Desk"]
         },
         {

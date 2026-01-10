@@ -1,5 +1,5 @@
 .events-section {
-    padding: 100px 20px;
+    padding: 70px 10px;
     background-color: #fff;
 }
 
@@ -99,7 +99,7 @@
 
 @media (max-width: 768px) {
     .events-section {
-        padding: 60px 20px;
+        padding: 40px 10px;
     }
 
     .events-header {
@@ -134,7 +134,7 @@
 
 @media (max-width: 480px) {
     .events-section {
-        padding: 40px 15px;
+        padding: 30px 10px;
     }
 
     .events-title-block h2 {

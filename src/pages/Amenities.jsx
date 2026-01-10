@@ -31,22 +31,22 @@ const Amenities = () => {
         {
             title: "JIVA SPA",
             desc: "Immerse yourself in a sanctuary of wellness where ancient Indian healing wisdom meets modern luxury. Our therapists use bespoke blends of essential oils and traditional techniques to restore balance to your body, mind, and soul.",
-            image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            image: "https://images.unsplash.com/photo-1561501900-3701fa6a0864?q=80&w=2070&auto=format&fit=crop"
         },
         {
             title: "INFINITY POOL",
             desc: "Swim amidst the clouds in our temperature-controlled infinity pool. Offering panoramic views of the city skyline, it serves as the perfect spot for a refreshing morning lap or a relaxing evening dip under the stars.",
-            image: "https://images.unsplash.com/photo-1572331165267-854da2bbc729?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop"
         },
         {
             title: "FINE DINING",
             desc: "Embark on a culinary journey with our world-class restaurants. From authentic local delicacies to international gourmet cuisines, our master chefs craft every dish with passion and precision using the finest ingredients.",
-            image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            image: "https://images.unsplash.com/photo-1561501900-3701fa6a0864?q=80&w=2070&auto=format&fit=crop"
         },
         {
             title: "CONCIERGE SERVICES",
             desc: "Our dedicated concierge team is at your service 24/7 to curate bespoke experiences. Whether it's securing a reservation at an exclusive restaurant or arranging a private city tour, we ensure every detail of your stay is flawless.",
-            image: "https://images.unsplash.com/photo-1563911302283-d2bc129e7c1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop"
         }
     ];
 

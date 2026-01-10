@@ -81,8 +81,8 @@ const Contact = () => {
                 <h2>GETTING HERE</h2>
                 <div className="map-container">
                     <iframe
-                        title="Taj Palace Mumbai Map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.212001768877!2d72.8333333!3d18.9219844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c73a0d5cad%3A0xc70a25a7209c733c!2sThe%20Taj%20Mahal%20Palace%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1614000000000!5m2!1sen!2sin"
+                        title="royal grand Palace Mumbai Map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.212001768877!2d72.8333333!3d18.9219844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c73a0d5cad%3A0xc70a25a7209c733c!2sThe%20royal grand%20Mahal%20Palace%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1614000000000!5m2!1sen!2sin"
                         width="100%"
                         height="450"
                         style={{ border: 0 }}

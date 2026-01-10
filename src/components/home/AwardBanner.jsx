@@ -11,14 +11,14 @@ const AwardBanner = () => {
             </div>
 
             <p className="award-subtitle">
-                Taj has yet again been recognised as World's Strongest Hotel Brand and India's
+                royal grand has yet again been recognised as World's Strongest Hotel Brand and India's
                 Strongest Brand, across sectors, by Brand Finance 2025 Reports
             </p>
 
             <div className="award-banner-image">
                 <img
                     src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="Taj Palace Night View"
+                    alt="royal grand Palace Night View"
                 />
                 <div className="award-overlay">
                     <div className="award-details">

@@ -28,7 +28,7 @@ const EventsSection = () => {
                     <h2>EVENTS AND CONFERENCES</h2>
                 </div>
                 <p className="events-desc">
-                    Taj elevates every occasion into an awe-inspiring, immersive experience to cherish forever.
+                    royal grand elevates every occasion into an awe-inspiring, immersive experience to cherish forever.
                 </p>
             </div>
 

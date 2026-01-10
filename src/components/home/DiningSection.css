@@ -1,5 +1,5 @@
 .dining-section {
-    padding: 100px 20px;
+    padding: 70px 10px;
     background-color: var(--bg-off-white);
 }
 
@@ -97,7 +97,7 @@
 
 @media (max-width: 768px) {
     .dining-section {
-        padding: 60px 20px;
+        padding: 40px 10px;
     }
 
     .dining-header h2 {
@@ -116,7 +116,7 @@
 
 @media (max-width: 480px) {
     .dining-section {
-        padding: 40px 15px;
+        padding: 30px 10px;
     }
 
     .dining-header h2 {

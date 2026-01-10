@@ -85,37 +85,72 @@
 }
 
 .offer-details-content {
-    background: white;
-    width: 90%;
-    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    /* Increased width */
+    padding: 8px 2px;
+    /* Reduced vertical padding */
     text-align: center;
-    color: #333;
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    color: #1a1a1a;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     transform: translateY(0);
+    transition: all 0.4s ease;
 }
 
 .offer-details-content h3 {
     font-family: var(--font-heading);
     color: #8B7355;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 400;
     margin-bottom: 10px;
-    letter-spacing: 1px;
+    /* Reduced margin */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+/* Add a small decorative line under the title */
+.offer-details-content h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #8B7355;
+    margin: 8px auto 0;
+    opacity: 0.6;
 }
 
 .offer-details-content p {
     font-family: var(--font-body);
-    color: #666;
+    color: #555;
     font-size: 0.95rem;
+    /* Slightly smaller text */
     margin-bottom: 20px;
+    /* Reduced margin */
     line-height: 1.6;
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 .offer-link {
-    color: #8B7355;
-    font-weight: 700;
-    font-size: 0.8rem;
+    display: inline-block;
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #8B7355;
+    transition: all 0.3s ease;
+}
+
+.offer-link:hover {
+    color: #8B7355;
+    letter-spacing: 3px;
 }
 
 .nav-btn {
@@ -292,32 +327,16 @@
         display: none;
     }
 
-    /* Animation Keyframes */
-    @keyframes slideUpFade {
-        from {
-            opacity: 0;
-            transform: translateY(100%);
-            /* Start completely off-screen at bottom */
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Base state: Hidden and pushed down */
+    /* Always show details on mobile, content visible */
     .offer-details-content {
-        opacity: 0;
-        transform: translateY(100%);
+        opacity: 1;
+        transform: none;
     }
 
-    /* Animate Container when center */
+    /* No animation on center, just static */
     .offer-card.center .offer-details-content {
-        animation: slideUpFade 0.6s ease forwards;
-        /* Slightly slower for better visibility */
-        animation-delay: 0.1s;
-        /* Tiny delay to ensure slide is felt */
+        animation: none;
+        opacity: 1;
     }
 
     /* Remove text animations */

@@ -5,7 +5,7 @@ const DiningSection = () => {
     const items = [
         {
             title: "EPICUREAN MASTERPIECES",
-            image: "https://images.unsplash.com/photo-1577106263724-2c8e03bfe9f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+            image: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
             desc: "Culinary delights crafted by master chefs."
         },
         {

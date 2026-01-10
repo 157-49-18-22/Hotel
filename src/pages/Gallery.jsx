@@ -54,12 +54,13 @@ const Gallery = () => {
             description: "Luxury Bathroom Amenities"
         },
         {
-            src: "https://images.unsplash.com/photo-1571896349842-6e53ce41e887?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             category: "POOL",
             description: "Infinity Pool - Serenity by the water"
         },
         {
-            src: "https://images.unsplash.com/photo-1572331165267-854da2bbc729?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+
             category: "POOL",
             description: "Evening Poolside Ambiance"
         },

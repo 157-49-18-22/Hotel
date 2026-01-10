@@ -133,7 +133,7 @@ const BookingForm = () => {
                 <select name="room_type">
                     <option>Luxury Grande Room</option>
                     <option>Royal Suite</option>
-                    <option>Taj Club Room</option>
+                    <option>royal grand Club Room</option>
                     <option>Presidential Suite</option>
                 </select>
             </div>
