@@ -1,6 +1,5 @@
 .exclusive-section {
-    padding: 60px 0;
-    background-color: #000;
+
     /* Dark background as seen in screenshot gaps/borders */
     overflow: hidden;
 }
@@ -24,6 +23,7 @@
     overflow: hidden;
 }
 
+/* Desktop Layout & Sizing */
 .offer-card.side {
     flex: 1;
     opacity: 0.7;
@@ -87,19 +87,16 @@
 .offer-details-content {
     background: white;
     width: 90%;
-    /* Floating look */
     padding: 30px;
     text-align: center;
     color: #333;
     box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(0);
-    /* Aligned at bottom */
 }
 
 .offer-details-content h3 {
     font-family: var(--font-heading);
     color: #8B7355;
-    /* Muted Gold */
     font-size: 1.2rem;
     margin-bottom: 10px;
     letter-spacing: 1px;
@@ -121,7 +118,6 @@
     letter-spacing: 1px;
 }
 
-/* Navigation Buttons */
 .nav-btn {
     position: absolute;
     top: 50%;
@@ -153,45 +149,184 @@
     right: 30px;
 }
 
+/* Visibility Control (Desktop) */
+.offer-card.center .dark-overlay,
+.offer-card.center .side-title {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.offer-card.side .offer-details {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Transitions */
+.offer-details,
+.dark-overlay,
+.side-title {
+    transition: opacity 0.5s ease;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .exclusive-section {
         padding: 40px 0;
+        background: #111;
+        /* Slightly lighter than pure black for mobile texture */
     }
 
     .exclusive-container {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        /* Horizontal layout */
         height: auto;
         gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 20px;
+        /* Peek padding */
+        justify-content: flex-start;
+        /* Align start */
+        /* Hide Scrollbar */
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE 10+ */
+    }
+
+    .exclusive-container::-webkit-scrollbar {
+        display: none;
+        /* Chrome/Safari/Webkit */
     }
 
     .offer-card.side,
     .offer-card.center {
-        flex: none;
-        width: 100%;
-        height: 400px;
+        flex: 0 0 85%;
+        /* Card takes 85% of width */
+        width: 85%;
+        height: 500px;
+        /* Taller for better proportion */
+        scroll-snap-align: center;
         opacity: 1;
+        margin-right: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        position: relative;
     }
 
-    .side-title {
-        font-size: 1.2rem;
+    /* Always show details on mobile, hide overlay title */
+    .offer-card .dark-overlay,
+    .offer-card .side-title {
+        display: none !important;
+    }
+
+    .offer-card .offer-details {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        display: flex !important;
+    }
+
+    .offer-image-container {
+        height: 100%;
+        width: 100%;
+    }
+
+    .offer-image-container img {
+        height: 70%;
+        /* Image takes top part */
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .offer-details {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        background: transparent;
+        justify-content: center;
+        align-items: flex-end;
     }
 
     .offer-details-content {
-        padding: 20px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 25px 20px;
+        border-radius: 20px 20px 0 0;
+        /* Rounded top corners */
+        text-align: left;
+        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+        transform: none;
+        margin-bottom: 0;
     }
 
     .offer-details-content h3 {
-        font-size: 1rem;
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+        color: #1a1a1a;
     }
 
     .offer-details-content p {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+        color: #555;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        /* Limit text lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .offer-link {
         font-size: 0.85rem;
+        color: #8B7355;
     }
 
     .nav-btn {
         display: none;
-        /* Hide navigation buttons on mobile */
+    }
+
+    /* Animation Keyframes */
+    @keyframes slideUpFade {
+        from {
+            opacity: 0;
+            transform: translateY(100%);
+            /* Start completely off-screen at bottom */
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Base state: Hidden and pushed down */
+    .offer-details-content {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    /* Animate Container when center */
+    .offer-card.center .offer-details-content {
+        animation: slideUpFade 0.6s ease forwards;
+        /* Slightly slower for better visibility */
+        animation-delay: 0.1s;
+        /* Tiny delay to ensure slide is felt */
+    }
+
+    /* Remove text animations */
+    .offer-card.center .offer-details-content h3,
+    .offer-card.center .offer-details-content p,
+    .offer-card.center .offer-details-content .offer-link {
+        animation: none;
+        opacity: 1;
+        /* Ensure text is visible inside the container */
     }
 }
 
@@ -199,11 +334,43 @@
 
     .offer-card.side,
     .offer-card.center {
-        height: 350px;
+        height: 480px;
     }
+}
 
-    .offer-details-content {
-        width: 95%;
-        padding: 15px;
+/* Mobile Pagination Dots */
+.carousel-dots {
+    display: none;
+    /* Hidden on desktop */
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.carousel-dots .dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+    background-color: #8B7355;
+    /* Gold active color */
+    transform: scale(1.2);
+    width: 20px;
+    /* Long pill for active */
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .carousel-dots {
+        display: flex;
+        /* Show on mobile */
     }
 }

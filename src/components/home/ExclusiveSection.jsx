@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import './ExclusiveSection.css';
 
@@ -42,39 +42,85 @@ const ExclusiveSection = () => {
   // We can just hardcode the positions or use a proper circular buffer.
   // Given only 3 items, let's just render them in order but style the active one differently.
 
+  const containerRef = useRef(null);
+  const itemRefs = useRef([]);
+
+  // Auto-play functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [activeIndex]);
+
+  // Scroll to active item on mobile
+  useEffect(() => {
+    if (window.innerWidth <= 768 && containerRef.current && itemRefs.current[activeIndex]) {
+      const container = containerRef.current;
+      const card = itemRefs.current[activeIndex];
+
+      const cardLeft = card.offsetLeft;
+      const cardWidth = card.offsetWidth;
+      const containerWidth = container.offsetWidth;
+
+      // Calculate centered position
+      const targetScroll = cardLeft - (containerWidth / 2) + (cardWidth / 2);
+
+      container.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth'
+      });
+    }
+  }, [activeIndex]);
+
+  const handleDotClick = (index) => {
+    setActiveIndex(index);
+  };
+
   return (
     <section className="exclusive-section">
-      <div className="exclusive-container">
+      <div className="exclusive-container" ref={containerRef}>
         {offers.map((offer, index) => {
           let position = 'side';
           if (index === activeIndex) position = 'center';
 
           return (
-            <div key={offer.id} className={`offer-card ${position}`} onClick={() => setActiveIndex(index)}>
+            <div
+              key={offer.id}
+              ref={el => itemRefs.current[index] = el}
+              className={`offer-card ${position}`}
+              onClick={() => setActiveIndex(index)}
+            >
               <div className="offer-image-container">
                 <img src={offer.image} alt={offer.title} />
-                {position !== 'center' && <div className="dark-overlay"></div>}
-
-                {position !== 'center' && (
-                  <h3 className="side-title">{offer.title}</h3>
-                )}
+                <div className="dark-overlay"></div>
+                <h3 className="side-title">{offer.title}</h3>
               </div>
 
-              {position === 'center' && (
-                <div className="offer-details">
-                  <div className="offer-details-content">
-                    <h3>{offer.title}</h3>
-                    <p>{offer.description}</p>
-                    <span className="offer-link">{offer.link} &gt;</span>
-                  </div>
+              <div className="offer-details">
+                <div className="offer-details-content">
+                  <h3>{offer.title}</h3>
+                  <p>{offer.description}</p>
+                  <span className="offer-link">{offer.link} &gt;</span>
                 </div>
-              )}
+              </div>
             </div>
           );
         })}
 
         <button className="nav-btn prev" onClick={handlePrev}><FaChevronLeft /></button>
         <button className="nav-btn next" onClick={handleNext}><FaChevronRight /></button>
+      </div>
+
+      {/* Mobile Pagination Dots */}
+      <div className="carousel-dots">
+        {offers.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === activeIndex ? 'active' : ''}`}
+            onClick={() => handleDotClick(index)}
+          ></span>
+        ))}
       </div>
     </section>
   );
