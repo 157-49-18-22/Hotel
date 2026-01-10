@@ -589,11 +589,11 @@
 }
 
 .ribbon-line.left {
-    left: 20px;
+    left: 23px;
 }
 
 .ribbon-line.right {
-    right: 20px;
+    right: 23px;
 }
 
 /* The Sign Board Itself */
@@ -606,6 +606,7 @@
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
 }
+
 
 /* Decorative screws/nails for ribbons */
 .sign-board::before,
