@@ -57,17 +57,17 @@ const Contact = () => {
 
                     <div className="info-item">
                         <h4>ADDRESS</h4>
-                        <p>barsana,agra,400001, India</p>
+                        <p>Barsana, Mathura, Uttar Pradesh 281405, India</p>
                     </div>
 
                     <div className="info-item">
                         <h4>PHONE</h4>
-                        <p>+91 22 6665 3366</p>
+                        <p>+91 72487 47000</p>
                     </div>
 
                     <div className="info-item">
                         <h4>EMAIL</h4>
-                        <p>reservations@Barsanahotels.com</p>
+                        <p>HOTELROYALGRANDBARSANA@gmail.com</p>
                     </div>
                 </div>
 
@@ -81,8 +81,8 @@ const Contact = () => {
                 <h2>GETTING HERE</h2>
                 <div className="map-container">
                     <iframe
-                        title="royal grand Palace Mumbai Map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.212001768877!2d72.8333333!3d18.9219844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c73a0d5cad%3A0xc70a25a7209c733c!2sThe%20royal grand%20Mahal%20Palace%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1614000000000!5m2!1sen!2sin"
+                        title="Hotel Royal Grand Barsana Map"
+                        src="https://maps.google.com/maps?q=27.694759,77.433693&z=15&output=embed"
                         width="100%"
                         height="450"
                         style={{ border: 0 }}
@@ -93,11 +93,11 @@ const Contact = () => {
                 <div className="directions-grid">
                     <div className="direction-card">
                         <h3>FROM AIRPORT</h3>
-                        <p>Chhatrapati Shivaji International Airport is approximately 25 km away. A private limousine pick-up can be arranged upon request.</p>
+                        <p>The nearest airport is Kheria Airport (Agra) or Indira Gandhi International Airport (New Delhi). Private pick-up can be arranged upon request.</p>
                     </div>
                     <div className="direction-card">
                         <h3>BY TRAIN</h3>
-                        <p>Chhatrapati Shivaji Terminus (CST) is just 2.5 km away, offering connections to all major Indian cities.</p>
+                        <p>Mathura Junction and Kosi Kalan Railway Station are nearby, offering connections to major Indian cities.</p>
                     </div>
                 </div>
             </section>
