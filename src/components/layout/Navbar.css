@@ -285,8 +285,16 @@
         margin-bottom: 20px;
     }
 
+    .navbar.scrolled {
+        background-color: var(--bg-dark);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        height: 60px;
+    }
+
     .navbar-container {
         padding: 0 15px;
+        height: 60px;
+
 
     }
 
