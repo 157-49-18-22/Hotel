@@ -7,6 +7,7 @@ import Gallery from './pages/Gallery';
 import Amenities from './pages/Amenities';
 import Contact from './pages/Contact';
 import Booking from './pages/Booking';
+import Menu from './pages/Menu';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/menu" element={<Menu />} />
           <Route path="/amenities" element={<Amenities />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/book" element={<Booking />} />

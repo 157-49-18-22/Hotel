@@ -43,6 +43,7 @@ const Navbar = () => {
                         <div className="nav-links">
                             <Link to="/rooms">ROOMS</Link>
                             <Link to="/gallery">GALLERY</Link>
+                            <Link to="/menu">DINING</Link>
                             <Link to="/amenities">AMENITIES</Link>
                             <Link to="/contact">CONTACT</Link>
                         </div>
@@ -67,6 +68,7 @@ const Navbar = () => {
                 <nav className="mobile-nav-links">
                     <Link to="/rooms" onClick={toggleMenu}>ROOMS</Link>
                     <Link to="/gallery" onClick={toggleMenu}>GALLERY</Link>
+                    <Link to="/menu" onClick={toggleMenu}>DINING</Link>
                     <Link to="/amenities" onClick={toggleMenu}>AMENITIES</Link>
                     <Link to="/contact" onClick={toggleMenu}>CONTACT</Link>
                     <Link to="/book" className="mobile-book-btn" onClick={toggleMenu}>BOOK NOW</Link>
