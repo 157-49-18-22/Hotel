@@ -41,7 +41,7 @@ const Amenities = () => {
         {
             title: "FINE DINING",
             desc: "Embark on a culinary journey with our world-class restaurants. From authentic local delicacies to international gourmet cuisines, our master chefs craft every dish with passion and precision using the finest ingredients.",
-            image: "https://images.unsplash.com/photo-1561501900-3701fa6a0864?q=80&w=2070&auto=format&fit=crop"
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.12 PM.jpeg"
         },
         {
             title: "CONCIERGE SERVICES",

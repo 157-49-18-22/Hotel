@@ -14,77 +14,66 @@ const Gallery = () => {
 
     const images = [
         {
-            src: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            category: "EXTERIOR",
-            description: "The Grand Facade at Sunset"
-        },
-        {
-            src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            src: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.11 PM (2).jpeg",
             category: "INTERIOR",
-            description: "Lobby Lounge - A warm welcome awaits"
+            description: "Grand Staircase"
         },
         {
-            src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            src: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.11 PM.jpeg",
             category: "INTERIOR",
-            description: "Executive Suite Living Area"
+            description: "Elegant Lobby Corridor"
         },
         {
-            src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            category: "EXTERIOR",
-            description: "Private Balcony Views"
-        },
-        {
-            src: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            category: "INTERIOR",
-            description: "Royal Hallway"
-        },
-        {
-            src: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            src: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.12 PM.jpeg",
             category: "DINING",
-            description: "Fine Dining Experience at 'The Aura'"
+            description: "Master Chef at Work"
         },
         {
-            src: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            src: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.08 PM.jpeg",
+            category: "ROOMS",
+            description: "Luxury Suite Bedroom"
+        },
+        {
+            src: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.09 PM (1).jpeg",
+            category: "ROOMS",
+            description: "Royal Executive Room"
+        },
+        {
+            src: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.10 PM (2).jpeg",
+            category: "ROOMS",
+            description: "Premium Deluxe Room"
+        },
+        {
+            src: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.56.54 PM.jpeg",
+            category: "ROOMS",
+            description: "Presidential Suite View"
+        },
+        {
+            src: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.11 PM (1).jpeg",
             category: "INTERIOR",
-            description: "Presidential Bedroom"
+            description: "Designer Ceiling & Lighting"
         },
         {
-            src: "https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            category: "INTERIOR",
-            description: "Luxury Bathroom Amenities"
+            src: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.10 PM.jpeg",
+            category: "ROOMS",
+            description: "Classic Heritage Room"
         },
         {
-            src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            category: "POOL",
-            description: "Infinity Pool - Serenity by the water"
-        },
-        {
-            src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-
-            category: "POOL",
-            description: "Evening Poolside Ambiance"
-        },
-        {
-            src: "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            category: "DINING",
-            description: "Al Fresco Dining"
-        },
-        {
-            src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            category: "DINING",
-            description: "Chef's Table Special"
+            src: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.09 PM (2).jpeg",
+            category: "ROOMS",
+            description: "Grand Comfort Twin"
         }
     ];
 
     const filteredImages = filter === 'ALL' ? images : images.filter(img => img.category === filter);
-    const categories = ["ALL", "EXTERIOR", "INTERIOR", "DINING", "POOL"];
+    const categories = ["ALL", "ROOMS", "INTERIOR", "DINING"];
 
     return (
         <>
             <Navbar />
             <div className="page-header gallery-header">
                 <div className="page-header-bg">
-                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Gallery Header" />
+                    <img src="/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.11 PM (1).jpeg" alt="Gallery Header" />
                     <div className="overlay-dark"></div>
                 </div>
                 <div className="page-title container">

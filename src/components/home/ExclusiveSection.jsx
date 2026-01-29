@@ -8,23 +8,23 @@ const ExclusiveSection = () => {
   const offers = [
     {
       id: 1,
-      title: "WOYAGE - DAYCATIONS",
-      image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "Escape for a day of luxury and relaxation.",
+      title: "LUXURY DAYCATIONS",
+      image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.11 PM.jpeg",
+      description: "Escape for a day of luxury in our elegant halls and corridors.",
       link: "MORE"
     },
     {
       id: 2,
-      title: "NEW BEGINNINGS",
-      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "Enjoy exclusive savings on breakfast-inclusive stays and celebrate new beginnings with us.",
+      title: "ROYAL STAYS",
+      image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.10 PM (2).jpeg",
+      description: "Enjoy exclusive savings on signature stays and celebrate new beginnings.",
       link: "MORE"
     },
     {
       id: 3,
-      title: "NEUPASS",
-      image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      description: "Unlock a world of rewards and privileges.",
+      title: "ELITE PRIVILEGES",
+      image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.09 PM (1).jpeg",
+      description: "Unlock a world of rewards and royal privileges with us.",
       link: "MORE"
     }
   ];

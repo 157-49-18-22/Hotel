@@ -28,7 +28,7 @@ const Menu = () => {
         },
         {
             category: "SNACKS",
-            image: "https://images.unsplash.com/photo-1541529086526-db283c563270?q=80&w=2070&auto=format&fit=crop",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.12 PM.jpeg",
             items: [
                 { id: 11, name: "Veg Manchurian", price: "240/-" },
                 { id: 12, name: "Paneer Manchurian", price: "280/-" },

@@ -17,38 +17,92 @@ const Rooms = () => {
         {
             id: 1,
             name: "Luxury Grande Room",
-            image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop",
-            price: "₹ 25,000 / Night",
-            desc: "Spectacular views of the city skyline, tastefully appointed with modern comforts. Perfect for both business and leisure travelers looking for a sanctuary in the city.",
-            longDesc: "Experience the ultimate in luxury with our Luxury Grande Room. Spanning 550 sq ft, this room features floor-to-ceiling windows offering panoramic views of the city skyline. The room differs a plush King-sized bed with 400-thread-count linens, a marble bathroom with a deep soaking tub and a rain shower. Modern amenities include high-speed Wi-Fi, a 55-inch smart TV, and a well-stocked minibar.",
-            amenities: ["550 Sq Ft", "City View", "King Bed", "marble bath"]
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.08 PM.jpeg",
+            price: "₹ 15,000 / Night",
+            desc: "Spectacular views of the plush interiors, tastefully appointed with modern comforts. Perfect for a peaceful retreat.",
+            longDesc: "Experience the ultimate in luxury with our Luxury Grande Room. This room features a plush King-sized bed, elegantly designed wooden interiors, and ambient lighting that creates a cozy atmosphere. Modern amenities include high-speed Wi-Fi, a premium TV, and a well-stocked minibar.",
+            amenities: ["450 Sq Ft", "Interior View", "King Bed", "Rain Shower"]
         },
         {
             id: 2,
             name: "Royal Suite",
-            image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1974&auto=format&fit=crop",
-            price: "₹ 45,000 / Night",
-            desc: "Indulge in royalty with expansive living spaces and butler service. The Royal Suite offers a separate living area, dining space, and a powder room.",
-            longDesc: "Live like royalty in our Royal Suite. This expansive 1200 sq ft suite includes a separate living room, a dining area for four, and a powder room for guests. The master bedroom is a haven of tranquility, featuring a signature King bed and a walk-in closet. Guests enjoy 24-hour butler service, airport transfers in a luxury sedan, and access to the exclusive Executive Lounge.",
-            amenities: ["1200 Sq Ft", "Sea View", "Butler Service", "Airport Transfer"]
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.56.54 PM.jpeg",
+            price: "₹ 25,000 / Night",
+            desc: "Indulge in royalty with expansive living spaces and premium furnishings. Designed for an unforgettable stay.",
+            longDesc: "Live like royalty in our Royal Suite. This expansive suite includes a separate living area and a master bedroom with premium linens. Guests enjoy signature furniture, a spacious bathroom, and high-end decor that reflects the heritage of Barsana.",
+            amenities: ["800 Sq Ft", "Royal Decor", "Butler Service", "Mini Bar"]
         },
         {
             id: 3,
-            name: "royal grand Club Room",
-            image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=2070&auto=format&fit=crop",
-            price: "₹ 35,000 / Night",
-            desc: "Exclusive access to the royal grand Club Lounge, complimentary high tea, and usage of the boardroom. Designed for the discerning traveler.",
-            longDesc: "The royal grand Club Room is designed for the business traveler who appreciates exclusivity. Located on the higher floors, these rooms offer breathtaking views and access to the royal grand Club Lounge, where you can enjoy complimentary breakfast, afternoon high tea, and evening cocktails. The room includes a large work desk, ergonomic chair, and premium stationery.",
-            amenities: ["600 Sq Ft", "Club Access", "High Tea", "Work Desk"]
+            name: "Royal Grand Club Room",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.09 PM.jpeg",
+            price: "₹ 18,000 / Night",
+            desc: "Elegant and spacious, offering a perfect blend of comfort and style for the modern traveler.",
+            longDesc: "The Royal Grand Club Room is designed for travelers who appreciate fine details. It features textured walls, premium upholstery, and a large workspace. Enjoy complimentary high tea and access to our exclusive lounge areas.",
+            amenities: ["500 Sq Ft", "Work Desk", "High Tea", "Club Access"]
         },
         {
             id: 4,
             name: "Presidential Suite",
-            image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop",
-            price: "₹ 1,50,000 / Night",
-            desc: "The epitome of luxury, offering unmatched grandeur, a private gym, massage room, and a dedicated pantry. Experience life at the top.",
-            longDesc: "The Presidential Suite is the jewel in our crown. Spread across 3000 sq ft, it offers unmatched grandeur and privacy. The suite includes a grand living room, a private dining room for ten, a study, a private gym, and a massage room. The master bathroom features a Jacuzzi with city views. A dedicated butler and chef are at your service 24/7 to cater to your every whim.",
-            amenities: ["3000 Sq Ft", "Panoramic View", "Private Gym", "24/7 Butler"]
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.09 PM (1).jpeg",
+            price: "₹ 45,000 / Night",
+            desc: "The epitome of grandeur, offering unmatched luxury and privacy for our most discerning guests.",
+            longDesc: "Our Presidential Suite is the pinnacle of luxury. Featuring two bedrooms, a private lounge, and a massive bathroom with a soaking tub. Every piece of furniture is handcrafted to provide a majestic experience.",
+            amenities: ["1200 Sq Ft", "Panoramic View", "Private Lounge", "24/7 Butler"]
+        },
+        {
+            id: 5,
+            name: "Heritage Deluxe Room",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.09 PM (2).jpeg",
+            price: "₹ 12,000 / Night",
+            desc: "A beautiful blend of traditional aesthetics and modern facilities for a comfortable stay.",
+            longDesc: "The Heritage Deluxe Room captures the spirit of the city with its traditional design elements. It offers two twin beds, large windows for natural light, and all essential modern conveniences.",
+            amenities: ["400 Sq Ft", "Twin Beds", "Traditional Decor", "Smart TV"]
+        },
+        {
+            id: 6,
+            name: "Executive Twin Room",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.09 PM (3).jpeg",
+            price: "₹ 14,000 / Night",
+            desc: "Spacious twin beds with a modern layout, ideal for business partners or friends.",
+            longDesc: "Our Executive Twin Room provides independent sleeping comfort with two separate beds. The room is equipped with a functional work area and high-speed internet, making it ideal for business trips.",
+            amenities: ["450 Sq Ft", "Twin Beds", "Work Desk", "High-Speed Wi-Fi"]
+        },
+        {
+            id: 7,
+            name: "Regal Comfort Room",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.10 PM.jpeg",
+            price: "₹ 16,000 / Night",
+            desc: "Warm and inviting interiors designed to make you feel right at home with a touch of luxury.",
+            longDesc: "Regal Comfort Rooms are designed with warm tones and soft lighting to ensure a relaxing stay. The room features a comfortable King bed and a seating area where you can enjoy your morning coffee.",
+            amenities: ["420 Sq Ft", "King Bed", "Seating Area", "Coffee Maker"]
+        },
+        {
+            id: 8,
+            name: "Majestic Garden Room",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.10 PM (1).jpeg",
+            price: "₹ 17,000 / Night",
+            desc: "Beautifully decorated room with views that bring a sense of tranquility to your stay.",
+            longDesc: "The Majestic Garden Room offers peaceful views and a serene environment. The interior is decorated with natural textures and colors, providing a refreshing escape from the city bustle.",
+            amenities: ["480 Sq Ft", "Quiet Zone", "Luxury Bath", "Welcome Drinks"]
+        },
+        {
+            id: 9,
+            name: "Classic Prime Suite",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.10 PM (2).jpeg",
+            price: "₹ 20,000 / Night",
+            desc: "A premium suite offering superior comfort and a host of exclusive amenities.",
+            longDesc: "The Classic Prime Suite is perfect for those who want a bit more space. It features a larger floor area, premium toiletries, and a dedicated sitting space for private meetings or relaxation.",
+            amenities: ["600 Sq Ft", "Premium Toiletries", "Private Bar", "LCD TV"]
+        },
+        {
+            id: 10,
+            name: "Grand Palace View Room",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.56.54 PM (1).jpeg",
+            price: "₹ 22,000 / Night",
+            desc: "Wake up to stunning architecture and a sense of grandeur every morning.",
+            longDesc: "The Grand Palace View Room provides a unique perspective of the hotel's stunning architecture. The room is spacious, with high ceilings and luxury finishes that make every moment feel special.",
+            amenities: ["550 Sq Ft", "Palace View", "High Ceiling", "Plush Linens"]
         }
     ];
 
@@ -84,7 +138,7 @@ const Rooms = () => {
             <Navbar />
             <div className="page-header">
                 <div className="page-header-bg">
-                    <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?q=80&w=1974&auto=format&fit=crop" alt="Rooms Header" />
+                    <img src="/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.11 PM.jpeg" alt="Rooms Header" />
                     <div className="overlay-dark"></div>
                 </div>
                 <div className="page-title container">
