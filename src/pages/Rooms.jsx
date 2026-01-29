@@ -16,52 +16,52 @@ const Rooms = () => {
     const rooms = [
         {
             id: 1,
-            name: "Luxury Grande Room",
+            name: "2 bed",
             image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.08 PM.jpeg",
-            price: "₹ 15,000 / Night",
+            price: "₹ 2000 / Night",
             desc: "Spectacular views of the plush interiors, tastefully appointed with modern comforts. Perfect for a peaceful retreat.",
             longDesc: "Experience the ultimate in luxury with our Luxury Grande Room. This room features a plush King-sized bed, elegantly designed wooden interiors, and ambient lighting that creates a cozy atmosphere. Modern amenities include high-speed Wi-Fi, a premium TV, and a well-stocked minibar.",
             amenities: ["450 Sq Ft", "Interior View", "King Bed", "Rain Shower"]
         },
         {
             id: 2,
-            name: "Royal Suite",
+            name: "3 bed ",
             image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.56.54 PM.jpeg",
-            price: "₹ 25,000 / Night",
+            price: "₹ 25,00 / Night",
             desc: "Indulge in royalty with expansive living spaces and premium furnishings. Designed for an unforgettable stay.",
             longDesc: "Live like royalty in our Royal Suite. This expansive suite includes a separate living area and a master bedroom with premium linens. Guests enjoy signature furniture, a spacious bathroom, and high-end decor that reflects the heritage of Barsana.",
             amenities: ["800 Sq Ft", "Royal Decor", "Butler Service", "Mini Bar"]
         },
         {
             id: 3,
-            name: "Royal Grand Club Room",
+            name: "2 bed",
             image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.09 PM.jpeg",
-            price: "₹ 18,000 / Night",
+            price: "₹ 2000 / Night",
             desc: "Elegant and spacious, offering a perfect blend of comfort and style for the modern traveler.",
             longDesc: "The Royal Grand Club Room is designed for travelers who appreciate fine details. It features textured walls, premium upholstery, and a large workspace. Enjoy complimentary high tea and access to our exclusive lounge areas.",
             amenities: ["500 Sq Ft", "Work Desk", "High Tea", "Club Access"]
         },
         {
             id: 4,
-            name: "Presidential Suite",
+            name: "2 bed",
             image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.09 PM (1).jpeg",
-            price: "₹ 45,000 / Night",
+            price: "₹ 2000 / Night",
             desc: "The epitome of grandeur, offering unmatched luxury and privacy for our most discerning guests.",
             longDesc: "Our Presidential Suite is the pinnacle of luxury. Featuring two bedrooms, a private lounge, and a massive bathroom with a soaking tub. Every piece of furniture is handcrafted to provide a majestic experience.",
             amenities: ["1200 Sq Ft", "Panoramic View", "Private Lounge", "24/7 Butler"]
         },
         {
             id: 5,
-            name: "Heritage Deluxe Room",
+            name: "3 bed",
             image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.09 PM (2).jpeg",
-            price: "₹ 12,000 / Night",
+            price: "₹ 25,00 / Night",
             desc: "A beautiful blend of traditional aesthetics and modern facilities for a comfortable stay.",
             longDesc: "The Heritage Deluxe Room captures the spirit of the city with its traditional design elements. It offers two twin beds, large windows for natural light, and all essential modern conveniences.",
             amenities: ["400 Sq Ft", "Twin Beds", "Traditional Decor", "Smart TV"]
         },
         {
             id: 6,
-            name: "Executive Twin Room",
+            name: "",
             image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.09 PM (3).jpeg",
             price: "₹ 14,000 / Night",
             desc: "Spacious twin beds with a modern layout, ideal for business partners or friends.",
