@@ -27,7 +27,7 @@ const Rooms = () => {
             id: 2,
             name: "3 bed ",
             image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.56.54 PM.jpeg",
-            price: "₹ 25,00 / Night",
+            price: "₹ 2500 / Night",
             desc: "Indulge in royalty with expansive living spaces and premium furnishings. Designed for an unforgettable stay.",
             longDesc: "Live like royalty in our Royal Suite. This expansive suite includes a separate living area and a master bedroom with premium linens. Guests enjoy signature furniture, a spacious bathroom, and high-end decor that reflects the heritage of Barsana.",
             amenities: ["800 Sq Ft", "Royal Decor", "Butler Service", "Mini Bar"]
@@ -54,52 +54,44 @@ const Rooms = () => {
             id: 5,
             name: "3 bed",
             image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.09 PM (2).jpeg",
-            price: "₹ 25,00 / Night",
+            price: "₹ 2500 / Night",
             desc: "A beautiful blend of traditional aesthetics and modern facilities for a comfortable stay.",
             longDesc: "The Heritage Deluxe Room captures the spirit of the city with its traditional design elements. It offers two twin beds, large windows for natural light, and all essential modern conveniences.",
             amenities: ["400 Sq Ft", "Twin Beds", "Traditional Decor", "Smart TV"]
         },
-        {
-            id: 6,
-            name: "",
-            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.09 PM (3).jpeg",
-            price: "₹ 14,000 / Night",
-            desc: "Spacious twin beds with a modern layout, ideal for business partners or friends.",
-            longDesc: "Our Executive Twin Room provides independent sleeping comfort with two separate beds. The room is equipped with a functional work area and high-speed internet, making it ideal for business trips.",
-            amenities: ["450 Sq Ft", "Twin Beds", "Work Desk", "High-Speed Wi-Fi"]
-        },
+
         {
             id: 7,
-            name: "Regal Comfort Room",
+            name: "2 bed",
             image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.10 PM.jpeg",
-            price: "₹ 16,000 / Night",
+            price: "₹ 2000 / Night",
             desc: "Warm and inviting interiors designed to make you feel right at home with a touch of luxury.",
             longDesc: "Regal Comfort Rooms are designed with warm tones and soft lighting to ensure a relaxing stay. The room features a comfortable King bed and a seating area where you can enjoy your morning coffee.",
             amenities: ["420 Sq Ft", "King Bed", "Seating Area", "Coffee Maker"]
         },
         {
             id: 8,
-            name: "Majestic Garden Room",
+            name: "2 bed",
             image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.10 PM (1).jpeg",
-            price: "₹ 17,000 / Night",
+            price: "₹ 2000 / Night",
             desc: "Beautifully decorated room with views that bring a sense of tranquility to your stay.",
             longDesc: "The Majestic Garden Room offers peaceful views and a serene environment. The interior is decorated with natural textures and colors, providing a refreshing escape from the city bustle.",
             amenities: ["480 Sq Ft", "Quiet Zone", "Luxury Bath", "Welcome Drinks"]
         },
         {
             id: 9,
-            name: "Classic Prime Suite",
+            name: "2 bed",
             image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.10 PM (2).jpeg",
-            price: "₹ 20,000 / Night",
+            price: "₹ 2000 / Night",
             desc: "A premium suite offering superior comfort and a host of exclusive amenities.",
             longDesc: "The Classic Prime Suite is perfect for those who want a bit more space. It features a larger floor area, premium toiletries, and a dedicated sitting space for private meetings or relaxation.",
             amenities: ["600 Sq Ft", "Premium Toiletries", "Private Bar", "LCD TV"]
         },
         {
             id: 10,
-            name: "Grand Palace View Room",
+            name: "3 bed",
             image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.56.54 PM (1).jpeg",
-            price: "₹ 22,000 / Night",
+            price: "₹ 2500 / Night",
             desc: "Wake up to stunning architecture and a sense of grandeur every morning.",
             longDesc: "The Grand Palace View Room provides a unique perspective of the hotel's stunning architecture. The room is spacious, with high ceilings and luxury finishes that make every moment feel special.",
             amenities: ["550 Sq Ft", "Palace View", "High Ceiling", "Plush Linens"]
@@ -111,6 +103,10 @@ const Rooms = () => {
     // State for 360 Modal and Details Modal
     const [show360, setShow360] = useState(null);
     const [showDetails, setShowDetails] = useState(null);
+    const [showFullVideo, setShowFullVideo] = useState(false);
+
+    const handleOpenVideo = () => setShowFullVideo(true);
+    const handleCloseVideo = () => setShowFullVideo(false);
 
     const handleOpen360 = (room) => {
         setShow360(room);
@@ -170,6 +166,18 @@ const Rooms = () => {
                         <div className="sign-board">
                             <h1 style={{ margin: 0, lineHeight: 1.2 }}>LUXURY ROOMS<br />& SUITES</h1>
                         </div>
+                    </motion.div>
+
+                    {/* Watch Video Button */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 1.2 }}
+                        className="watch-video-btn-container"
+                    >
+                        <button className="watch-video-btn" onClick={handleOpenVideo}>
+                            <span className="play-icon">▶</span> WATCH FULL VIDEO TOUR
+                        </button>
                     </motion.div>
                 </div>
             </div>
@@ -250,6 +258,22 @@ const Rooms = () => {
                                 BOOK THIS ROOM
                             </button>
                         </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Video Tour Modal */}
+            {showFullVideo && (
+                <div className="video-modal-overlay" onClick={handleCloseVideo}>
+                    <div className="video-modal-content" onClick={e => e.stopPropagation()}>
+                        <button className="close-video-btn" onClick={handleCloseVideo}>×</button>
+                        <div className="video-modal-header">
+                            <h3>Full Room Tour</h3>
+                        </div>
+                        <video controls autoPlay muted className="full-video-player">
+                            <source src="/video.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             )}
