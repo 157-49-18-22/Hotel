@@ -29,24 +29,24 @@ const Amenities = () => {
 
     const amenities = [
         {
-            title: "JIVA SPA",
-            desc: "Immerse yourself in a sanctuary of wellness where ancient Indian healing wisdom meets modern luxury. Our therapists use bespoke blends of essential oils and traditional techniques to restore balance to your body, mind, and soul.",
-            image: "https://images.unsplash.com/photo-1561501900-3701fa6a0864?q=80&w=2070&auto=format&fit=crop"
+            title: "ROYAL ARCHITECTURE",
+            desc: "Immerse yourself in the grand heritage of Barsana with our stunning architecture. Every corner of our hotel tells a story of elegance and tradition, blending historic charm with modern luxury for a truly unique stay.",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.11 PM (1).jpeg"
         },
         {
-            title: "INFINITY POOL",
-            desc: "Swim amidst the clouds in our temperature-controlled infinity pool. Offering panoramic views of the city skyline, it serves as the perfect spot for a refreshing morning lap or a relaxing evening dip under the stars.",
-            image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop"
+            title: "GRAND LOBBY",
+            desc: "Step into a world of grandeur from the moment you arrive. Our temperature-controlled lobby offers a majestic welcome with its high ceilings, plush seating, and warm hospitality that makes you feel like royalty.",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.11 PM (2).jpeg"
         },
         {
-            title: "FINE DINING",
-            desc: "Embark on a culinary journey with our world-class restaurants. From authentic local delicacies to international gourmet cuisines, our master chefs craft every dish with passion and precision using the finest ingredients.",
+            title: "SIGNATURE DINING",
+            desc: "Embark on a culinary journey in our grand dining hall. From authentic Braj delicacies to international gourmet cuisines, our master chefs craft every dish with passion and precision using the finest local ingredients.",
             image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.12 PM.jpeg"
         },
         {
-            title: "CONCIERGE SERVICES",
-            desc: "Our dedicated concierge team is at your service 24/7 to curate bespoke experiences. Whether it's securing a reservation at an exclusive restaurant or arranging a private city tour, we ensure every detail of your stay is flawless.",
-            image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop"
+            title: "PREMIUM HOSPITALITY",
+            desc: "Our dedicated service team is at your side 24/7 to ensure your comfort. From arranging local temple tours in Barsana to ensuring your room is perfectly prepared, we are committed to making your stay flawless.",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.10 PM (2).jpeg"
         }
     ];
 
@@ -66,7 +66,7 @@ const Amenities = () => {
             <Navbar />
             <div className="page-header amenities-header">
                 <div className="page-header-bg">
-                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Amenities Header" />
+                    <img src="/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.11 PM.jpeg" alt="Amenities Header" />
                     <div className="overlay-dark"></div>
                 </div>
                 <div className="page-title container">

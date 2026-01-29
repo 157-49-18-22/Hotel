@@ -5,17 +5,17 @@ const DiningSection = () => {
     const items = [
         {
             title: "EPICUREAN MASTERPIECES",
-            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.12 PM.jpeg",
+            image: "/dinner.jpg",
             desc: "Culinary delights crafted by master chefs."
         },
         {
             title: "ICONIC RESTAURANTS",
-            image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.12 PM.jpeg",
             desc: "Ambiances that tell a story of their own."
         },
         {
             title: "SIGNATURE DISHES",
-            image: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+            image: "/paneer.jpg",
             desc: "Flavors that linger in your memory forever."
         }
     ];

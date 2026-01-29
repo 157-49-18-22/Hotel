@@ -37,9 +37,9 @@ const Home = () => {
                         className="offers-grid"
                     >
                         {[
-                            { title: "Romantic Getaways", img: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=600&q=80", subtitle: "Cherish moments together" },
-                            { title: "Royal Retreats", img: "https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=600&q=80", subtitle: "Live like a Maharaja" },
-                            { title: "Wellness Sanctuaries", img: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80", subtitle: "Rejuvenate your senses" }
+                            { title: "Romantic Getaways", img: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.08 PM.jpeg", subtitle: "Cherish moments together" },
+                            { title: "Royal Retreats", img: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.56.54 PM.jpeg", subtitle: "Live like a Maharaja" },
+                            { title: "Wellness Sanctuaries", img: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.10 PM (1).jpeg", subtitle: "Rejuvenate your senses" }
                         ].map((item, index) => (
                             <AnimatedDiv
                                 key={index}

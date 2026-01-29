@@ -6,17 +6,17 @@ const EventsSection = () => {
         {
             id: 1,
             title: "MEETINGS & CONFERENCES",
-            image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.11 PM (2).jpeg",
         },
         {
             id: 2,
             title: "EVENTS",
-            image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.12 PM.jpeg",
         },
         {
             id: 3,
             title: "TIMELESS WEDDINGS",
-            image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            image: "/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.11 PM (1).jpeg",
         }
     ];
 
