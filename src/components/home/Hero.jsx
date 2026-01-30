@@ -6,14 +6,26 @@ const Hero = () => {
     return (
         <section className="hero">
             <div className="hero-background">
+                {/* Blurred background video to fill the screen */}
                 <video
                     autoPlay
                     loop
                     muted
-                    playsInline /* Crucial for mobile autoplay */
+                    playsInline
+                    className="hero-video-blur"
+                >
+                    <source src="/bg1.mp4" type="video/mp4" />
+                </video>
+
+                {/* Main video in contain mode to show full content */}
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     className="hero-video"
                 >
-                    <source src="https://videos.pexels.com/video-files/7578552/7578552-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+                    <source src="/bg1.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <div className="hero-overlay"></div>
