@@ -1,4 +1,5 @@
 import React from 'react';
+import hotelImg from '../../assets/hotel.png';
 import './AwardBanner.css';
 
 const AwardBanner = () => {
@@ -17,24 +18,10 @@ const AwardBanner = () => {
 
             <div className="award-banner-image">
                 <img
-                    src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    src={hotelImg}
                     alt="royal grand Palace Night View"
                 />
-                <div className="award-overlay">
-                    <div className="award-details">
-                        <div className="award-item">
-                            <h3>WORLD'S STRONGEST</h3>
-                            <span>HOTEL BRAND 2025</span>
-                            <p>2024 • 2023 • 2021</p>
-                        </div>
-                        <div className="vertical-divider"></div>
-                        <div className="award-item">
-                            <h3>INDIA'S STRONGEST</h3>
-                            <span>BRAND 2025</span>
-                            <p>2020 • 2022 • 2023 • 2024</p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </section>
     );

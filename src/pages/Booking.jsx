@@ -15,7 +15,7 @@ const Booking = () => {
             <div className="page-header booking-header" style={{ height: '40vh' }}>
                 <div className="page-header-bg">
                     {/* Used a different luxury image */}
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Booking Header" />
+                    <img src="/Hotle pics/WhatsApp Image 2026-01-29 at 12.46.09 PM (2).jpeg" alt="Booking Header" />
                     <div className="overlay-dark"></div>
                 </div>
                 <div className="page-title container">

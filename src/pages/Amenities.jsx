@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import './Amenities.css';
-import { FaConciergeBell, FaCar, FaUserTie, FaUtensils, FaExchangeAlt, FaStethoscope } from 'react-icons/fa';
+// Icons removed as they are no longer used
 import { motion } from 'framer-motion';
 
 const Amenities = () => {
@@ -52,14 +52,7 @@ const Amenities = () => {
 
 
 
-    const services = [
-        { label: "24-Hour Concierge", icon: <FaConciergeBell /> },
-        { label: "Limousine Service", icon: <FaCar /> },
-        { label: "Butler Service", icon: <FaUserTie /> },
-        { label: "Private Dining", icon: <FaUtensils /> },
-        { label: "Currency Exchange", icon: <FaExchangeAlt /> },
-        { label: "Doctor on Call", icon: <FaStethoscope /> }
-    ];
+
 
     return (
         <>
@@ -122,23 +115,6 @@ const Amenities = () => {
                 ))}
             </section>
 
-            <section className="container" style={{ padding: '0 20px 80px' }}>
-                <div style={{ background: '#fcfcfc', padding: '80px 40px', textAlign: 'center', borderTop: '1px solid #eee' }}>
-                    <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.2rem', marginBottom: '10px', color: '#1a1a1a', letterSpacing: '1px' }}>
-                        AT YOUR SERVICE
-                    </h2>
-                    <div className="gold-divider-small" style={{ margin: '0 auto 50px' }}></div>
-
-                    <div className="service-icons-grid">
-                        {services.map((srv, i) => (
-                            <div key={i} className="service-icon-item">
-                                <span className="service-icon">{srv.icon}</span>
-                                <span className="service-label">{srv.label}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
             <Footer />
         </>
     );
