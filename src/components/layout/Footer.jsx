@@ -49,6 +49,7 @@ const Footer = () => {
 
                 <div className="footer-bottom">
                     <p>&copy; {new Date().getFullYear()} Hotel Royal Grand Barsana. All Rights Reserved.</p>
+                    <p className="made-by">Made by <a href="https://www.maydiv.com/" target="_blank" rel="noopener noreferrer">Maydiv Infotech</a></p>
                 </div>
             </div>
         </footer>
